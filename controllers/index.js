@@ -1,7 +1,3 @@
-function doClick(e) {  
-    alert($.label.text);
-}
-
 function saveIt(e){
 	// set the name of the folder to store photos
 	var new_folder = Titanium.Filesystem.getFile('/photos'); 
