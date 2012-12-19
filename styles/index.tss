@@ -1,0 +1,57 @@
+".container": {
+	backgroundColor:"white"
+},
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000"
+},
+"#mainView":{
+	borderWidth: "1",
+	borderColor: "#000",
+	height: "300",
+	width: "300",
+	top: "0"
+},
+"#image1":{
+	image:"https://sphotos-a.xx.fbcdn.net/hphotos-ash4/383660_10150528297131844_364016044_n.jpg",
+	height: "150",
+	width: "150",
+	top: "0",
+	left: "0",
+	borderWidth: "1",
+	borderColor: "#000"
+},
+"#image2":{
+	image:"https://sphotos-a.xx.fbcdn.net/hphotos-snc6/198266_10152300531050581_1779810491_n.jpg",
+	height: "150",
+	width: "150",
+	top: "0",
+	right: "0",
+	borderWidth: "1",
+	borderColor: "#000"
+},
+"#image3":{
+	image:"https://sphotos-a.xx.fbcdn.net/hphotos-ash4/383660_10150528297131844_364016044_n.jpg",
+	height: "150",
+	width: "150",
+	bottom: "0",
+	left: "0",
+	borderWidth: "1",
+	borderColor: "#000"
+},
+"#image4":{
+	image:"https://sphotos-a.xx.fbcdn.net/hphotos-snc6/198266_10152300531050581_1779810491_n.jpg",
+	height: "150",
+	width: "150",
+	bottom: "0",
+	right: "0",
+	borderWidth: "1",
+	borderColor: "#000"
+},
+"#image5":{
+	top: "300",
+	backgrouncColor: "#000",
+	height: "200",
+	width: "300"
+}

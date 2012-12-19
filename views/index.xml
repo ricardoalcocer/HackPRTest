@@ -1,0 +1,11 @@
+<Alloy>
+	<Window class="container">
+		<View id="mainView" onClick="saveIt">
+			<ImageView id="image1"></ImageView>
+			<ImageView id="image2"></ImageView>
+			<ImageView id="image3"></ImageView>
+			<ImageView id="image4"></ImageView>
+		</View>
+		<ImageView id="image5"></ImageView>
+	</Window>
+</Alloy>
