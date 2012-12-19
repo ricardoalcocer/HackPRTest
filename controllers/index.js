@@ -3,25 +3,45 @@ function doClick(e) {
 }
 
 function saveIt(e){
-	// toImage() returns a Blob with a snapshot of whatever was inside it
-	// this blob can be used to create an actual file
-	// for demonstration purposes i'm assigning it to another view
-	//$.image5.image=e.source.toImage();
+	// set the name of the folder to store photos
+	var new_folder = Titanium.Filesystem.getFile('/photos'); 
 
-	// haven't tested this code, but it should write the image to disk
-	// so it can later be used to send to Parse via api call
-	var new_folder = Titanium.Filesystem.getFile(parent, 'test'); 
-
+	// create the folder if it doesn't already exists
 	if( !new_folder.exists() ) { 
-		new_folder.createDirectory(); }
-	});
+		new_folder.createDirectory(); 
+	};
 
+	// get the image from the view
 	var theImage = e.source.toImage(); 
+
+	// create unique file name using date
 	var d=new Date(); 
 	var filename = d.getTime() + ".png"; 
-	var f = Titanium.Filesystem.getFile(parent + '/test',filename); 
+
+	// get a handle to this file-to-be-created
+	var f = Titanium.Filesystem.getFile('/photos',filename); 
+
+	// write the image to the disk
 	f.write(theImage);
 
+	// the image path is:
+	alert(f.nativePath);
+
+	// send the file to a web service
+	var XHR = require("xhr");
+	var http = new XHR();
+
+	var onSuccessCallback=function(){
+		// what to do if the http call succeded
+
+		// perhaps some cleanup?  delete the file as we no longer need it
+	}
+
+	var onErrorCallback=function(){
+		// what to do if the http call failed
+	}
+
+	http.get('http://web.service.endopoing',onSuccessCallback,onErrorCallback);
 }
 
 $.index.open();
